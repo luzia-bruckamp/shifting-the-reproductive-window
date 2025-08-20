@@ -16,9 +16,16 @@ The HFEA data consist of 7 data sets in csv format, for the years 1991-1994, 199
 The cleaning code selects the relevant variables from all data sets, cleans them, and merges all the data sets together. The data sets from 1991 to 2016 are all in the same format and are handled by the same cleaning function. The last data set is in a slightly different format and is cleaned separately.
 ### HFD data
 The data from the HFD are accessible at https://www.humanfertility.org. In order to access the data, you will have to register with the HFD if you do not have an account yet. Once you are registered, you are able to log in and to download any data.
-At the top of the page, go to “Data” and then “Zipped Data Files”. Scroll down to find the UK and download the zipped file for all of the UK. The downloaded folder should have the name “GBR_NP”. If it doesn’t, then you will need to either change the folder name or change the name in the R file.
+The data is updated periodically and will therefore differ from the version of the data we used, which was downloaded on 3 December 2023. In order to download the same version of the data, you need to go to https://www.humanfertility.org/Country/Country?cntr=GBR_NP&lastUpdate=20230104
+Then you need to individually download the three files. The first is the "Total fertility rate" from 1974-2020 for all birth orders under "Period summary indicators" at the top. Scroll down to "Birth counts, population exposures, and rates: period". Here you want the "Female population exposure" and "Age-specific fertility rates. For both data sets, you want "All birth orders combined" and by "year, age", i.e. the middle column of the bigger column on the left.
+To download all files, click on them, and the file should open in a new tab. Right click and select "save as" and you should be prompted to download the files. The files should be named
+-GBR_NPtfrRR
+-GBR_NPexposRR
+-GBR_NPbirthsRR
+
+and they should be .txt files. You can check whether you have the right version of the data by looking at the top of each file: It should say that it was last modified on 01/12/2022.
 ## Setup instructions
-You should put all the HFEA data sets and the folder with all the HFD data sets into the same folder. You will then set this folder as your working directory in the cleaning and analysis code so that they can be read in and the cleaned data can be exported there. All three R files will prompt you to change the working directory at the top of the script.
+You should put all the HFEA data sets and all the HFD data sets into the same folder. You will then set this folder as your working directory in the cleaning and analysis code so that they can be read in and the cleaned data can be exported there. All three R files will prompt you to change the working directory at the top of the script.
 You need to first run the two cleaning scripts, “cleaning_hfd.R” and “cleaning_hfea.R” before you can run the analysis script, “analysis.R”.
 ## Notes
 One last important note is that for two reasons, you might not be able to generate exactly the same results as us. First, the HFD data is periodically updated, which usually means that some decimal points change. Second, we use a random number generator when cleaning the HFEA data, in order to assign a birth year when it is missing. Even though we set the seed for reproducibility, this could generate slightly different results if you are using a different version of R.
