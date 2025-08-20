@@ -12,6 +12,7 @@ The HFEA data consist of 7 data sets in csv format, for the years 1991-1994, 199
 - hfea_2010_2014.csv
 - hfea_2015_2016.csv
 - hfea_2017_2018.csv
+
 The cleaning code selects the relevant variables from all data sets, cleans them, and merges all the data sets together. The data sets from 1991 to 2016 are all in the same format and are handled by the same cleaning function. The last data set is in a slightly different format and is cleaned separately.
 ### HFD data
 The data from the HFD are accessible at https://www.humanfertility.org. In order to access the data, you will have to register with the HFD if you do not have an account yet. Once you are registered, you are able to log in and to download any data.
