@@ -19,9 +19,9 @@ The data from the HFD are accessible at https://www.humanfertility.org. In order
 The data is updated periodically and will therefore differ from the version of the data we used, which was downloaded on 3 December 2023. In order to download the same version of the data, you need to go to https://www.humanfertility.org/Country/Country?cntr=GBR_NP&lastUpdate=20230104
 Then you need to individually download the three files. The first is the "Total fertility rate" from 1974-2020 for all birth orders under "Period summary indicators" at the top. Scroll down to "Birth counts, population exposures, and rates: period". Here you want the "Female population exposure" and "Age-specific fertility rates. For both data sets, you want "All birth orders combined" and by "year, age", i.e. the middle column of the bigger column on the left.
 To download all files, click on them, and the file should open in a new tab. Right click and select "save as" and you should be prompted to download the files. The files should be named
--GBR_NPtfrRR
--GBR_NPexposRR
--GBR_NPbirthsRR
+- GBR_NPtfrRR
+- GBR_NPexposRR
+- GBR_NPbirthsRR
 
 and they should be .txt files. You can check whether you have the right version of the data by looking at the top of each file: It should say that it was last modified on 01/12/2022.
 ## Setup instructions
